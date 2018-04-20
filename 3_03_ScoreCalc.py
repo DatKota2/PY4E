@@ -21,4 +21,4 @@ elif floatScore >= 0.7:
 elif floatScore >= 0.6:
     print("D")
 else:
-    print("F")
+    print("F.")

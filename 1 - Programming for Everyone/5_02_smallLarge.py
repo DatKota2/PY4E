@@ -19,6 +19,7 @@ while True:
     elif ival < smallest:
         smallest = ival
 
+
+# This prints the maximum and smallest numbers.
 print("Maximum is", largest)
 print("Minimum is", smallest)
-

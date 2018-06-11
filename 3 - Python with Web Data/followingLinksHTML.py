@@ -11,14 +11,17 @@ url = input('Enter - ')
 if len(url) < 1:
     url = 'http://py4e-data.dr-chuck.net/known_by_Fikret.html'
 count = int(input('Enter count: '))
-print('Count = ',count)
+print('Count = ', count)
 position = int((input('Enter position: '))) - 1
 print('Position =', position)
 
-html = urllib.request.urlopen(url, context=ctx).read()
-soup = BeautifulSoup(html, 'html.parser')
+while count > 0:
+    html = urllib.request.urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, 'html.parser')
 
-tags = soup('a')
-tagList = list()
-for tag in tags:
-    tagList.append(tag)
+    tags = soup('a')
+    tagList = list()
+    for tag in tags:
+        tagList.append(tag)
+    url = tagList[position]
+    tagList = list()
